@@ -1,6 +1,12 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineClose, AiOutlineMenu, AiOutlineShoppingCart } from "react-icons/ai";
+import { Dancing_Script} from 'next/font/google'
+import SearchBar from "./searchBar";
+import { MdPersonPin } from 'react-icons/md'
+
+
+const design = Dancing_Script({ weight: '700', subsets: ['latin'] })
 
 function SideBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +18,7 @@ function SideBar() {
   };
 
   return (
-    <div className="flex relative justify-start  text-xl pt-2 pl-2">
+    <div className="flex relative justify-start items-center text-xl  pl-4">
       <AiOutlineMenu
         size={25}
         className="relative cursor-pointer"
@@ -68,7 +74,24 @@ function SideBar() {
           onClick={toggleMenu}
         />
       )}
+      <div className="flex items-center">
+        <div className="flex px-20 text-5xl">
+        <h1 className={design.className}>Dealio</h1>
+        </div>
+        <div className="w-[1000px] pl-32">
+            <SearchBar />
+        </div>
+        <div className="flex items-center px-24">
+        <MdPersonPin size={30}/>
+        <h1 className="px-3 cursor-pointer">Sign In</h1>
+        </div>
+      <div className="flex items-center ">
+        <AiOutlineShoppingCart size={30} />
+        <h1 className="px-3 cursor-pointer">Cart</h1>
+      </div>
+      </div>
     </div>
+    
   );
 }
 

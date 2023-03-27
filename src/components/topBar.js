@@ -1,7 +1,4 @@
-import React from 'react'
-// import { Dancing_Script} from 'next/font/google'
-
-// const design = Dancing_Script({ weight: '700', subsets: ['latin'] })
+import React from 'react' 
 
 function topBar() {
   return (
