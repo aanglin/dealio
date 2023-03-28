@@ -5,3 +5,12 @@
 body {
   @apply bg-[#D9D8CA] text-[#8c8c8c];
 }
+
+.slider-container {
+  position: relative;
+  width: 100vw; 
+  height: 100vh; 
+  overflow: hidden; 
+  margin-left: -75vw; 
+  transform: translateX(50%); 
+}

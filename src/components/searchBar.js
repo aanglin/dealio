@@ -20,7 +20,7 @@ function SearchBar() {
             onChange={(e) => setQuery(e.target.value)}
             className="bg-transparent border-none text-[#195759] focus:outline-none text-xl placeholder:text-[#195759]"
             type="text"
-            placeholder="Search for a recipe"
+            placeholder="Find the Dealio"
              value={query}
           />
         </div>
