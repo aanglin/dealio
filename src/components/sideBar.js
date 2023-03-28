@@ -18,10 +18,10 @@ function SideBar() {
   };
 
   return (
-    <div className="flex relative justify-start items-center text-xl  pl-4">
+    <div className="flex relative justify-start items-center text-xl  pl-4 bg-[#64D4D9]">
       <AiOutlineMenu
         size={25}
-        className="relative cursor-pointer"
+        className="relative cursor-pointer text-[#195759]"
         onClick={toggleMenu}
       />
 
@@ -75,19 +75,19 @@ function SideBar() {
         />
       )}
       <div className="flex items-center">
-        <div className="flex px-20 text-5xl">
+        <div className="flex px-20 text-5xl text-[#195759]">
         <h1 className={design.className}>Dealio</h1>
         </div>
         <div className="w-[1000px] pl-32">
             <SearchBar />
         </div>
         <div className="flex items-center px-24">
-        <MdPersonPin size={30}/>
-        <h1 className="px-3 cursor-pointer">Sign In</h1>
+        <MdPersonPin size={30} className="text-[#195759]"/>
+        <h1 className="px-3 cursor-pointer text-[#195759]">Sign In</h1>
         </div>
       <div className="flex items-center ">
-        <AiOutlineShoppingCart size={30} />
-        <h1 className="px-3 cursor-pointer">Cart</h1>
+        <AiOutlineShoppingCart size={30} className="text-[#195759]"/>
+        <h1 className="px-3 cursor-pointer text-[#195759]">Cart</h1>
       </div>
       </div>
     </div>
