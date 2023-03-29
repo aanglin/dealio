@@ -9,7 +9,8 @@ import Head from 'next/head'
 
 
 
-export default function Home() {
+export default function Home({results}) {
+  console.log(results)
   return (
     <>
       <Head>
@@ -27,4 +28,16 @@ export default function Home() {
       </main>
     </>
   )
+}
+
+export async function getServerSideProps() {
+  const baseUrl = process.env.BASE_URL;
+  const results = await fetch(
+    `${baseUrl}/api/products`
+  ).then((res) => res.json());
+  return {
+    props: {
+      results
+    },
+  };
 }
