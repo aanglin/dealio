@@ -1,7 +1,10 @@
 import SideBar from '@/components/sideBar'
 import Slider from '@/components/slider'
 import TopBar from '@/components/topBar'
+import Title from '@/components/title'
+import TitleCards from '@/components/titleCards'
 import Head from 'next/head'
+
 
 
 
@@ -18,7 +21,9 @@ export default function Home() {
       <main>
         <TopBar />
         <SideBar />
+        <Title />
         <Slider />
+        <TitleCards />
       </main>
     </>
   )

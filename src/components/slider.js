@@ -59,8 +59,8 @@ function Slider() {
   };
 
   return (
-    <div className="flex  relative max-w-[1450px] w-full h-full overflow-hidden ml-[vw] translate-x-60">
-  <div className="flex-1 h-[610px] w-full m-auto py-16 px-4 relative group">
+    <div className="flex  relative max-w-[1450px] w-full h-full overflow-hidden translate-x-60">
+  <div className="flex-1 h-[610px] w-full m-auto py-16  relative group">
     <div
       style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
       className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
