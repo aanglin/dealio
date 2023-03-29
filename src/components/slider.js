@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
 import Banner1 from "../../public/assets/banner1.png";
@@ -42,6 +42,11 @@ function Slider() {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  useEffect(() => {
+    const randomIndex = Math.floor(Math.random() * slides.length);
+    setCurrentIndex(randomIndex);
+  }, [slides]);
+
   const prevSlide = () => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
@@ -60,7 +65,7 @@ function Slider() {
 
   return (
     <div className="flex  relative max-w-[1450px] w-full h-full overflow-hidden translate-x-60">
-  <div className="flex-1 h-[610px] w-full m-auto py-16  relative group">
+  <div className="flex-1 h-[617px] w-full m-auto py-12 relative group">
     <div
       style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
       className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
@@ -86,10 +91,10 @@ function Slider() {
     </div>
   </div>
   <div className="flex flex-col w-[34rem]  mt-[4rem] ml-[5rem] ">
-    <div className="flex bg-white w-full h-[16rem] rounded-xl">
+    <div className="flex bg-white w-full h-[15rem] rounded-xl">
       <Image src={Banner1}  className="rounded-xl"/>
     </div>
-    <div className="flex bg-[#64D4D9] mt-2 w-full h-[13rem] rounded-xl ">
+    <div className="flex bg-[#64D4D9] mt-2 w-full h-[15rem] rounded-xl ">
     <Image src={Banner2}  className="rounded-xl"/>
     </div>
     
