@@ -1,14 +1,9 @@
 import TopBar from '@/components/topBar'
 import Slider from '@/components/slider'
 import Footer from '@/components/footer'
-import Title from '@/components/title'
 import TitleCards from '@/components/titleCards'
 import HomeCard from '@/components/homeCards'
 import Head from 'next/head'
-
-
-
-
 
 
 export default function Home({results}) {
@@ -22,7 +17,6 @@ export default function Home({results}) {
       </Head>
       <main>
         <TopBar/>
-        {/* <Title /> */}
         <Slider />
         <TitleCards />
         <HomeCard results={results} />
