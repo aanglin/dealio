@@ -25,7 +25,7 @@ function homeProducts({title, description, price, image}) {
           <div className="text-2xl font-bold grow">
         ${price}
       </div>
-      <button className="bg-emerald-400 py-1 px-2 rounded-xl">add to cart</button>
+      <button className="bg-emerald-400 py-1 px-2 rounded-xl text-white">add to cart</button>
     </div>
   </div>
   )
