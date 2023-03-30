@@ -45,7 +45,7 @@ function Slider() {
   useEffect(() => {
     const randomIndex = Math.floor(Math.random() * slides.length);
     setCurrentIndex(randomIndex);
-  }, [slides]);
+  }, []);
 
   const prevSlide = () => {
     const isFirstSlide = currentIndex === 0;
@@ -64,8 +64,8 @@ function Slider() {
   };
 
   return (
-    <div className="flex py-12 pt-36 relative max-w-[1450px] w-full  overflow-hidden translate-x-60">
-  <div className="flex-1 h-[617px] w-full m-auto py-12 relative group">
+    <div className="flex py-12  relative max-w-[1450px] w-full translate-x-60">
+  <div className="flex-1 h-[617px] w-full m-auto  relative group">
     <div
       style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
       className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
