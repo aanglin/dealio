@@ -1,8 +1,9 @@
 import React from 'react'
+import TopBar from '../components/topBar'
 
 function checkout() {
   return (
-    <div>checkout</div>
+    <TopBar />
   )
 }
 
