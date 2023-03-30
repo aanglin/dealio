@@ -5,8 +5,6 @@ import { HiSearch } from "react-icons/hi";
 
 function SearchBar() {
   const [query, setQuery] = useState('');
-  
-
 
   return (
     <>

@@ -1,6 +1,6 @@
-import SideBar from '@/components/sideBar'
-import Slider from '@/components/slider'
 import TopBar from '@/components/topBar'
+import Slider from '@/components/slider'
+import Footer from '@/components/footer'
 import Title from '@/components/title'
 import TitleCards from '@/components/titleCards'
 import HomeCard from '@/components/homeCards'
@@ -21,12 +21,12 @@ export default function Home({results}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <TopBar />
-        <SideBar />
-        <Title />
+        <TopBar/>
+        {/* <Title /> */}
         <Slider />
         <TitleCards />
         <HomeCard results={results} />
+        <Footer />
       </main>
     </>
   )
