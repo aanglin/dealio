@@ -10,8 +10,8 @@ import Head from 'next/head'
 
 
 
+
 export default function Home({results}) {
-  console.log(results)
   return (
     <>
       <Head>
@@ -31,6 +31,7 @@ export default function Home({results}) {
     </>
   )
 }
+
 
 export async function getServerSideProps() {
   const baseUrl = process.env.BASE_URL;

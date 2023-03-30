@@ -9,3 +9,7 @@ body {
 li {
   @apply px-28 text-xl text-[#195759]
 }
+
+#pic{
+ max-height: 200px;
+}
