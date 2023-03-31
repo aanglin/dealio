@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import CheckBar from '../components/CheckBar'
+import CheckBar from '../components/checkBar'
 import { Context} from '../components/context'
 import { useContext } from 'react'
 import Image from 'next/image'
@@ -7,6 +7,10 @@ import Image from 'next/image'
 function Checkout() {
   const {selectedProducts, setSelectedProducts} = useContext(Context);
   const [productsInfos, setProductsInfos] = useState([]);
+  const [name, setName] = useState('');
+  const [address, setAddress] = useState('');
+  const [city, setCity] = useState('');
+  const [email, setEmail] = useState('');
 
   useEffect(() => {
     const oneId = [...new Set(selectedProducts)];
@@ -29,6 +33,33 @@ if (pos !== -1){
   });
 }
 }
+
+let deliveryPrice = 6.99;
+let subTotal = 0;
+
+if (selectedProducts?.length) {
+  if (!productsInfos) {
+    console.log('productsInfos is not defined!');
+    // Load productsInfos here if it's not already loaded
+  } else {
+    for (let id of selectedProducts) {
+      const product = productsInfos.find(p => p._id === id);
+      if (product) {
+        subTotal += Number(product.price || 0);
+      }
+    }
+  }
+}
+
+subTotal = subTotal.toFixed(2); // round to 2 decimal places
+
+if (subTotal > 15) {
+  deliveryPrice *= 1.02; // add 2% to deliveryPrice
+  deliveryPrice = deliveryPrice.toFixed(2);
+}
+
+const total = (Number(subTotal) + parseFloat(deliveryPrice)).toFixed(2); // calculate total and round to 2 decimal places
+
   return (
     <div>
     <CheckBar />
@@ -58,7 +89,28 @@ if (pos !== -1){
         </div>
       </div>
     ))}
-    </div>
+        <div className='flex flex-col p-5 pl-[7rem] w-[82%]'>
+          <input value={name} onChange={e => setName(e.target.value) } className='bg-gray-100 w-1/2 rounded-lg px-4 py-2 mb-3' type="text" placeholder='Name' />
+          <input value={address} onChange={e => setAddress(e.target.value) } className='bg-gray-100 w-1/2 rounded-lg px-4 py-2 mb-3' type="text" placeholder='Street Address' />
+          <input value={city} onChange={e => setCity(e.target.value) } className='bg-gray-100 w-1/2 rounded-lg px-4 py-2 mb-3' type="text" placeholder='City and Zip Code' />
+          <input value={email} onChange={e => setEmail(e.target.value) } className='bg-gray-100 w-1/2 rounded-lg px-4 py-2 mb-3' type="email" placeholder='Email' />
+        </div>
+        <div className='mt-4 pl-[7rem] w-[82%]'>
+          <div className='flex my-3 w-1/2'>
+            <h3 className='grow font-bold'>Subtotal</h3>
+            <h3 className='font-bold'>${subTotal}</h3>
+          </div>
+          <div className='flex my-3 w-1/2'>
+            <h3 className='grow font-bold'>Delivery</h3>
+            <h3 className='font-bold'>${deliveryPrice}</h3>
+          </div>
+          <div className='flex my-3 w-1/2 border-t pt-3 border-dashed border-emerald-200'>
+            <h3 className='grow font-bold'>Total</h3>
+            <h3 className='font-bold'>${total}</h3>
+          </div>
+        <button className='bg-emerald-500 px-5 py-2 rounded-lg text-white w-1/2 '>Pay ${total}</button>
+        </div>
+        </div>
   )
 }
 
