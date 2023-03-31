@@ -92,10 +92,10 @@ function Slider() {
   </div>
   <div className="flex flex-col w-[34rem]  mt-[4rem] ml-[5rem] ">
     <div className="flex bg-white w-full h-[15rem] rounded-xl">
-      <Image src={Banner1}  className="rounded-xl"/>
+      <Image src={Banner1}  className="rounded-xl" alt="/"/>
     </div>
     <div className="flex bg-[#64D4D9] mt-2 w-full h-[15rem] rounded-xl ">
-    <Image src={Banner2}  className="rounded-xl"/>
+    <Image src={Banner2}  className="rounded-xl" alt="/"/>
     </div>
     
   </div>

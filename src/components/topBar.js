@@ -5,7 +5,7 @@ import { Dancing_Script} from 'next/font/google'
 
 const design = Dancing_Script({ weight: '700', subsets: ['latin'] })
 
-function SideBar() {
+function TopBar() {
  
 
   return (
@@ -18,8 +18,8 @@ function SideBar() {
         <ul className='flex pl-2'>
         <li><Link href={'#jewelery'} className="inline-block">Jewelery</Link></li>
         <li> <Link href={'#electronics'}className="inline-block">Electronics</Link></li>
-        <li> <Link href={'#women Clothing'}className="inline-block">Womens</Link></li>
-        <li><Link href={'#men'}className="inline-block">Mens</Link></li>
+        <li> <Link href={'#ladies'}className="inline-block">Womens</Link></li>
+        <li><Link href={'#guys'}className="inline-block">Mens</Link></li>
         </ul>
         <Nav />
       
@@ -29,4 +29,4 @@ function SideBar() {
   );
 }
 
-export default SideBar;
+export default TopBar;
