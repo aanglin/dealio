@@ -13,7 +13,6 @@ function homeCards({ results }) {
   }else {
     results = results
   }
-
   return (
     <div className="p-5">
       <div className="p-5 ml-5">

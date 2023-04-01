@@ -1,3 +1,5 @@
+import { useContext, useEffect, useState } from 'react'
+import {Context} from '@/components/context'
 import TopBar from '@/components/topBar'
 import Slider from '@/components/slider'
 import Footer from '@/components/footer'
@@ -7,6 +9,14 @@ import Head from 'next/head'
 
 
 export default function Home({results}) {
+  const {setSelectedProducts} = useContext(Context);
+  const [success, setSuccess] = useState(false);
+  useEffect(() => {
+    if (window.location.href.includes('success')) {
+setSelectedProducts([]);
+setSuccess(true);
+    }
+  },[])
   return (
     <>
       <Head>
@@ -17,6 +27,12 @@ export default function Home({results}) {
       </Head>
       <main>
         <TopBar/>
+        {success && (
+          <div className='flex justify-center mb-5 bg-green-400 text-white text-2xl p-5 rounded-xl'>
+            Thanks for your order!!
+          </div>
+
+        )}
         <Slider />
         <TitleCards />
         <HomeCard results={results} />
