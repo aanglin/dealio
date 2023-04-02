@@ -65,7 +65,7 @@ function Slider() {
 
   return (
     <div className="flex py-12  relative max-w-[1450px] w-full translate-x-60">
-  <div className="flex-1 h-[617px] w-full m-auto  relative group">
+  <div className="flex-1 h-[617px] w-full m-auto object-contain  relative group">
     <div
       style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
       className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
@@ -92,10 +92,10 @@ function Slider() {
   </div>
   <div className="flex flex-col w-[34rem]  mt-[4rem] ml-[5rem] ">
     <div className="flex bg-white w-full h-[15rem] rounded-xl">
-      <Image src={Banner1}  className="rounded-xl" alt="/"/>
+      <Image src={Banner1}  className=" object-contain" alt="/"/>
     </div>
-    <div className="flex bg-[#64D4D9] mt-2 w-full h-[15rem] rounded-xl ">
-    <Image src={Banner2}  className="rounded-xl" alt="/"/>
+    <div className="flex bg-[#64D4D9] mt-2 ml-[59px] w-[427px] h-[15rem] rounded-xl ">
+    <Image src={Banner2}  className=" object-cover" alt="/"/>
     </div>
     
   </div>

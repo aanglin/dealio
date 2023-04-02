@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import Link from "next/link";
 import { AiOutlineShoppingCart, AiOutlineHome } from "react-icons/ai";
-import { Context } from "./context"
+import { Context } from "./Context"
 
 function Nav() {
     const {selectedProducts} = useContext(Context)

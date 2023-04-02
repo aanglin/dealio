@@ -1,6 +1,6 @@
 import {React,useState} from "react";
 import { HiSearch } from "react-icons/hi";
-import HomeProducts from "./homeProducts";
+import HomeProducts from "./HomeProducts";
 
 
 

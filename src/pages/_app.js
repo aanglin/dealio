@@ -1,4 +1,4 @@
-import { ContextProvider } from '@/components/context'
+import { ContextProvider } from '@/components/Context'
 import '@/styles/globals.css'
  import { Raleway } from 'next/font/google'
 

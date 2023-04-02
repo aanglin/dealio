@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import CheckBar from '../components/checkBar'
-import { Context} from '../components/context'
+import { Context} from '../components/Context'
 import { useContext } from 'react'
 import Image from 'next/image'
 

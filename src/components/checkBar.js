@@ -1,4 +1,4 @@
-import Nav from "./nav"
+import Nav from "./Nav"
 import { Dancing_Script} from 'next/font/google'
 
 

@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from 'react'
-import {Context} from '@/components/context'
-import TopBar from '@/components/topBar'
-import Slider from '@/components/slider'
-import Footer from '@/components/footer'
-import TitleCards from '@/components/titleCards'
-import HomeCard from '@/components/homeCards'
+import {Context} from '@/components/Context'
+import TopBar from '@/components/TopBar'
+import Slider from '@/components/Slider'
+import Footer from '@/components/Footer'
+import TitleCards from '@/components/TitleCards'
+import HomeCard from '@/components/HomeCards'
 import Head from 'next/head'
 
 
