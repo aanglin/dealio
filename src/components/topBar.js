@@ -2,7 +2,7 @@ import Link from "next/link";
 import React, { useContext } from 'react'
 import { Dancing_Script} from 'next/font/google'
 import { AiOutlineShoppingCart, AiOutlineHome } from "react-icons/ai";
-import { Context } from "./Context"
+import { Context } from "./context"
 
 
 const design = Dancing_Script({ weight: '700', subsets: ['latin'] })

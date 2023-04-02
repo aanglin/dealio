@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { useContext } from "react";
-import { Context } from "./Context";
+import { Context } from "./context";
 
 function homeProducts({ _id, title, description, price, image }) {
   const { setSelectedProducts } = useContext(Context);
