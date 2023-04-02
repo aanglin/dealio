@@ -8,7 +8,7 @@ function homeProducts({ _id, title, description, price, image }) {
     setSelectedProducts((prev) => [...prev, _id]);
   }
   return (
-      <div className="w-72 p-10 px-6 hover:shadow-2xl rounded-xl">
+      <div className="flex flex-col justify-center items-center  w-[30rem] h-[30rem] hover:shadow-xl">
       <div className="p-5 ">
         <Image
         id='pic'
@@ -20,17 +20,19 @@ function homeProducts({ _id, title, description, price, image }) {
         />
       </div>
       <div>
-        <h2 className=" p-1 pt-2 text-lg font-extrabold">{title}</h2>
+        <h2 className=" p-2 pt-2 text-lg font-extrabold">{title}</h2>
         </div>
-          <p className="pt-1 text-sm leading-4 line-clamp-3">
+          <p className="p-3 pt-1 text-sm leading-2 line-clamp-5">
             {description}
           </p>
-        <div className="flex mt-2 pb-4">
-            <div className="text-2xl font-bold grow">
+        <div className="flex mt-2 pb-4 justify-center items-center ">
+            <div className="text-2xl font-bold px-12">
           ${price}
         </div>
-        <button onClick={addProduct} className="bg-emerald-400 py-1 px-2 rounded-xl text-white">add to cart</button>
       </div>
+      <div className="w-full pb-5 px-3">
+        <button onClick={addProduct} className="w-full bg-emerald-400  py-1 px-2 rounded-xl text-white ">add to cart</button>
+        </div>
     </div>
   );
 }
