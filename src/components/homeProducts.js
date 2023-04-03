@@ -8,18 +8,18 @@ function homeProducts({ _id, title, description, price, image }) {
     setSelectedProducts((prev) => [...prev, _id]);
   }
   return (
-      <div className="flex flex-col justify-center items-center  w-[30rem] h-[30rem] hover:shadow-xl">
+      <div className="flex flex-col justify-center items-center rounded-xl  w-[25rem] h-[30rem] hover:shadow-xl">
       <div className="p-5 ">
         <Image
         id='pic'
           src={image}
           width={1920}
           height={1080}
-          className="object-contain"
+          className="object-contain w-[200px] h-[200px]"
           alt="/"
         />
       </div>
-      <div>
+      <div className="">
         <h2 className=" p-2 pt-2 text-lg font-extrabold">{title}</h2>
         </div>
           <p className="p-3 pt-1 text-sm leading-2 line-clamp-5">
