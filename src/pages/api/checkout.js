@@ -1,10 +1,10 @@
 import Order from "@/models/order";
-import { db } from "../../lib/connect";
+import  dbConnect  from "../../lib/connect";
 import Product from "../../models/products";
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 async function handler(req, res) {
-  await db;
+  await dbConnect();
   if (req.method !== "POST") {
     res.json("This should be a POST request").send();
     return;

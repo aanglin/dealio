@@ -1,10 +1,10 @@
-import { db } from '../../lib/connect';
+import  dbConnect  from '../../lib/connect';
 import { buffer } from 'micro'
 import  Order from '../../models/order'
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 async function handler(req,res) {
-    await db;
+    await dbConnect();
     const signingSecret = process.env.Signing_SECRET
     const payload = await buffer(req);
     const signature = req.headers['stripe-signature'];

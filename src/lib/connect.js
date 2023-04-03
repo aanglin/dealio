@@ -9,14 +9,14 @@ if (!uri) {
 
 mongoose.connect(uri, options);
 
-const db = mongoose.connection;
+const dbConnect = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
   console.log('You are Connected');
 });
 
-export default db;
+export default dbConnect;
 
 
 
