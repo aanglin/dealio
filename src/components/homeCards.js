@@ -6,7 +6,6 @@ import HomeProducts from "./homeProducts";
 
 function homeCards({ results }) {
   const [query, setQuery] = useState('');
-
   const categoriesNames = [...new Set(results.map((p) => p.category))];
   if (query) {
     results = results.filter(p => p.title.toLowerCase().includes(query))

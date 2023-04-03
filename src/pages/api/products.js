@@ -1,4 +1,4 @@
-import Product from '@/models/products';
+import Product from '../../models/products';
 import dbConnect from '../../lib/connect'
 
 
