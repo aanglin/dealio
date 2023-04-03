@@ -64,8 +64,8 @@ function Slider() {
   };
 
   return (
-    <div className="flex py-12  relative max-w-[1450px] w-full translate-x-60">
-  <div className="flex-1 h-[617px] w-full m-auto object-contain  relative group">
+    <div className="flex flex-col md:flex-row py-12 relative max-w-[1450px] w-full mx-auto overflow-hidden">
+  <div className="md:flex-1 h-[617px] w-full m-auto object-contain relative group">
     <div
       style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
       className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
@@ -90,16 +90,52 @@ function Slider() {
       ))}
     </div>
   </div>
-  <div className="flex flex-col w-[34rem]  mt-[4rem] ml-[5rem] ">
-    <div className="flex bg-white w-full h-[15rem] rounded-xl">
-      <Image src={Banner1}  className=" object-contain" alt="/"/>
+  <div className="lg:flex lg:flex-col w-full lg:w-[34rem] mt-[4rem] lg:mt-12 ml-[5rem]">
+    <div className="flex pr-[195px] bg-white w-[560px] h-[15rem] lg:w-[55rem] lg:mr-[53px]">
+      <Image src={Banner1} className="object-contain" alt="/" />
     </div>
-    <div className="flex bg-[#64D4D9] mt-2 ml-[59px] w-[427px] h-[15rem] rounded-xl ">
-    <Image src={Banner2}  className=" object-cover" alt="/"/>
+    <div className="flex bg-[#64D4D9] mt-2 md:mt-4 ml-[px] md:ml-[59px] w-[367px] md:w-[25rem] md:h-[15rem] h-[12rem]">
+      <Image src={Banner2} className="object-cover" alt="/" />
     </div>
-    
   </div>
 </div>
+
+//     <div className="flex py-12  relative max-w-[1450px] w-full translate-x-60">
+//   <div className="flex-1 h-[617px] w-full m-auto object-contain  relative group">
+//     <div
+//       style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
+//       className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
+//     ></div>
+//     {/* Left Arrow */}
+//     <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-white/30 text-black cursor-pointer">
+//       <BsChevronCompactLeft onClick={prevSlide} size={30} />
+//     </div>
+//     {/* Right Arrow */}
+//     <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-white/30 text-black cursor-pointer">
+//       <BsChevronCompactRight onClick={nextSlide} size={30} />
+//     </div>
+//     <div className="flex top-4 justify-center py-2">
+//       {slides.map((slide, slideIndex) => (
+//         <div
+//           key={slideIndex}
+//           onClick={() => goToSlide(slideIndex)}
+//           className="text-2xl cursor-pointer"
+//         >
+//           <RxDotFilled />
+//         </div>
+//       ))}
+//     </div>
+//   </div>
+//   <div className="flex flex-col w-[34rem]  mt-[4rem] ml-[5rem] ">
+//     <div className="flex bg-white w-full h-[15rem] rounded-xl">
+//       <Image src={Banner1}  className=" object-contain" alt="/"/>
+//     </div>
+//     <div className="flex bg-[#64D4D9] mt-2 ml-[59px] w-[427px] h-[15rem] rounded-xl ">
+//     <Image src={Banner2}  className=" object-cover" alt="/"/>
+//     </div>
+    
+//   </div>
+// </div>
 );
 }
 
