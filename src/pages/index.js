@@ -8,15 +8,26 @@ import HomeCard from '@/components/homeCards'
 import Head from 'next/head'
 
 
-export default function Home({results}) {
+export default function Home() {
   const {setSelectedProducts} = useContext(Context);
   const [success, setSuccess] = useState(false);
+  const [results, setResults] = useState([]);
   useEffect(() => {
     if (window.location.href.includes('success')) {
 setSelectedProducts([]);
 setSuccess(true);
     }
   },[])
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch('/api/products');
+      const data = await response.json();
+      setResults(data);
+    }
+
+    fetchData();
+  }, []);
   return (
     <>
       <Head>
@@ -43,14 +54,4 @@ setSuccess(true);
 }
 
 
-export async function getServerSideProps() {
-  const baseUrl = process.env.BASE_URL;
-  const results = await fetch(
-    `${baseUrl}/api/products`
-  ).then((res) => res.json());
-  return {
-    props: {
-      results
-    },
-  };
-}
+
