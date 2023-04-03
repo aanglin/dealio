@@ -4,7 +4,7 @@ import Product from "../../models/products";
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 async function handler(req, res) {
-  await dbConnect();
+  await dbConnect;
   if (req.method !== "POST") {
     res.json("This should be a POST request").send();
     return;

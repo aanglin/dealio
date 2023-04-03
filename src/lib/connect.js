@@ -11,8 +11,8 @@ mongoose.connect(uri, options);
 
 const dbConnect = mongoose.connection;
 
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
+dbConnect.on('error', console.error.bind(console, 'connection error:'));
+dbConnect.once('open', function() {
   console.log('You are Connected');
 });
 
