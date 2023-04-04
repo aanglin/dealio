@@ -68,7 +68,7 @@ function Slider() {
   <div className="md:flex-1 h-[617px] w-full m-auto object-contain relative group">
     <div
       style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-      className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
+      className="w-full h-full bg-center bg-cover duration-500"
     ></div>
     {/* Left Arrow */}
     <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-white/30 text-black cursor-pointer">
@@ -90,7 +90,7 @@ function Slider() {
       ))}
     </div>
   </div>
-  <div className="flex justify-center pl-44 lg:pl-0">
+  <div className="flex justify-center pl-56 lg:pl-0">
   <div className="lg:flex lg:flex-col  lg:w-[34rem] mt-[4rem] lg:mt-12 ml-[5rem]">
     <div className="flex pr-[320px] w-[760px] h-[15rem] lg:w-[55rem] lg:mr-[53px]">
       <Image src={Banner1} className="object-contain" alt="/" />
