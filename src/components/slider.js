@@ -90,6 +90,7 @@ function Slider() {
       ))}
     </div>
   </div>
+  <div className="flex justify-center pl-44 lg:pl-0">
   <div className="lg:flex lg:flex-col  lg:w-[34rem] mt-[4rem] lg:mt-12 ml-[5rem]">
     <div className="flex pr-[320px] w-[760px] h-[15rem] lg:w-[55rem] lg:mr-[53px]">
       <Image src={Banner1} className="object-contain" alt="/" />
@@ -97,6 +98,7 @@ function Slider() {
     <div className="flex pr-[320px]  mt-9 lg:ml-[68px] w-[753px] lg:h-[15rem] h-[13rem]">
       <Image src={Banner2} className="object-cover" alt="/" />
     </div>
+  </div>
   </div>
 </div>
 
