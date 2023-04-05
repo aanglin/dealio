@@ -3,7 +3,7 @@ import React from 'react'
 
 function titleCards() {
   return (
-    <div className='flex justify-evenly p-4  pl-[1rem] cursor-pointer'>
+    <div className='hidden md:flex justify-evenly p-4  pl-[1rem] cursor-pointer'>
         <div className='flex flex-col justify-center items-center  w-[20rem] h-[20rem] rounded-xl hover:shadow-xl'>
             <Image src={'https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg'} width={1920} height={1080} className="w-[9rem] h-1/2 object-contain" alt='/'/>
             <h1 className='text-lg pt-2'>Jewelery</h1>

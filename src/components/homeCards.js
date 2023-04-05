@@ -15,7 +15,7 @@ function homeCards({ results }) {
   return (
     <div className="p-5">
       <div className="p-5 ml-5">
-    <div className="relative flex items-center justify-center max-w-[700px] w-full m-auto pt-4 pb-9 z-10 ">
+    <div className="hidden relative md:flex items-center justify-center max-w-[700px] w-full m-auto pt-4 pb-9 z-10 ">
       <form
         className="flex justify-between items-center w-full m-auto p-3  bg-transparent border-2 border-[#195759] text-gray-400  rounded-2xl"
       >
@@ -42,11 +42,11 @@ function homeCards({ results }) {
             <h1 id={categoryName.toLowerCase()} className="flex justify-center py-2 text-2xl font-bold capitalize">
               {categoryName}
             </h1>
-            <div className="flex overflow-x-scroll snap-x scrollbar-hide px-9 p-9">
+            <div className="flex overflow-x-scroll snap-x scrollbar-hide py-11">
             {results
               .filter((p) => p.category === categoryName)
               .map((results) => (
-                <div key={results._id} className="px-[4rem] snap-start">
+                <div key={results._id} className="pr-4 md:pr-0 md:px-[4rem] snap-start">
                   <HomeProducts {...results} />
                 </div>
               ))}
