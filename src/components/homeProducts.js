@@ -8,7 +8,7 @@ function homeProducts({ _id, title, description, price, image }) {
     setSelectedProducts((prev) => [...prev, _id]);
   }
   return (
-      <div className="flex flex-col justify-start items-center w-[25rem] h-[30rem] hover:shadow-xl">
+      <div className="flex flex-col justify-center items-center w-[25rem] h-[30rem] hover:shadow-xl">
       <div className="p-1 ">
         <Image
         id='pic'
