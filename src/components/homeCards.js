@@ -46,7 +46,7 @@ function homeCards({ results }) {
             {results
               .filter((p) => p.category === categoryName)
               .map((results) => (
-                <div key={results._id} className="pr-4 md:pr-0 md:px-[4rem] snap-start">
+                <div key={results._id} className="pr-4  md:pr-[2rem] snap-start">
                   <HomeProducts {...results} />
                 </div>
               ))}

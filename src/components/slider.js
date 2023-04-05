@@ -64,8 +64,8 @@ function Slider() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row py-12 relative max-w-[1450px] w-full mx-auto overflow-hidden">
-  <div className="md:flex-1 h-[617px] w-full m-auto object-contain relative group">
+    <div className="flex flex-col lg:flex-row py-12 relative max-w-[1450px] w-full mx-auto overflow-hidden">
+  <div className=" h-[617px] w-full m-auto object-contain relative group">
     <div
       style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
       className="w-full h-full bg-center bg-cover duration-500"
@@ -90,12 +90,12 @@ function Slider() {
       ))}
     </div>
   </div>
-  <div className="flex justify-center pl-56 lg:pl-0">
-  <div className="lg:flex lg:flex-col  lg:w-[34rem] mt-[4rem] lg:mt-12 ml-[5rem]">
-    <div className="flex pr-[320px] w-[760px] h-[15rem] lg:w-[55rem] lg:mr-[53px]">
+  <div className="flex justify-center w-full pl-56 lg:pl-0">
+  <div className="lg:flex lg:flex-col lg:w-[34rem] mt-[4rem] lg:mt-12 ml-[5rem]">
+    <div className="flex pr-[320px] w-[760px] h-[15rem] md:w-[1040px] md:h-auto lg:w-[55rem] lg:mr-[53px]">
       <Image src={Banner1} className="object-contain" alt="/" />
     </div>
-    <div className="flex pr-[320px]  mt-9 lg:ml-[68px] w-[746px] lg:h-[15rem] h-[13rem]">
+    <div className="flex pr-[320px] mt-9 lg:pr-[300px] w-[746px] md:w-[1040px] md:h-auto lg:w-[863px] lg:h-[18rem] h-[13rem]">
       <Image src={Banner2} className="object-cover" alt="/" />
     </div>
   </div>
