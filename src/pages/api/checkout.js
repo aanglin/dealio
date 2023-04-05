@@ -23,9 +23,7 @@ async function handler(req, res) {
       quantity,
       price_data: {
         currency: "USD",
-        product_data: {name: product.title},
-        product_data: {image: product.image},
-        product_data: {description: product.description},
+        product_data: {name: [product.title,product.image,product.description]},
         unit_amount: product.price * 100,
       },
     });
