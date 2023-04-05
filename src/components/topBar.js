@@ -13,7 +13,7 @@ function TopBar() {
     <div className="pb-28">
     <div className="fixed flex justify-start items-center text-xl  pl-4 bg-[#64D4D9] w-full h-[5rem] z-50">
       <div className="flex items-center">
-        <div className="flex text-3xl text-[#195759] sm:text-5xl">
+        <div className="flex text-3xl text-[#195759] md:pl-3 sm:text-5xl">
         <h1 className={design.className}>Dealio</h1>
         </div>
         <ul className='pl-2 hidden lg:flex'>
@@ -23,7 +23,7 @@ function TopBar() {
         <li><Link href={'#guys'}className="inline-block">Mens</Link></li>
         </ul>
         <div className='flex'>
-        <Link href={'/'} className="flex px-11 items-center sm:px-24">
+        <Link href={'/'} className="flex px-11 items-center md:pl-[23rem] lg:p-36">
         <AiOutlineHome size={30} className="text-[#195759]"/>
         <h1 className="cursor-pointer text-[#195759]">Home</h1>
         </Link>
