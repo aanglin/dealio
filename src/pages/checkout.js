@@ -75,7 +75,7 @@ const total = (Number(subTotal) + parseFloat(deliveryPrice)).toFixed(2); // calc
       <div className='p-5 font-bold'>No products are in your shopping cart!!</div>
     )}
     {productsInfos.length && productsInfos.map(productInfo => (
-      <div key={productInfo._id} className='flex mb-5'>
+      <div key={productInfo._id} className='flex mb-5 overflow-hidden'>
         <div className='p-3 shrink-0 w-24'>
           <Image src={productInfo.image} width={1920} height={1080} alt="/" />
         </div>
