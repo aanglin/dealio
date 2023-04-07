@@ -69,7 +69,7 @@ if (subTotal > 100) {
 const total = (Number(subTotal) + parseFloat(deliveryPrice)).toFixed(2); // calculate total and round to 2 decimal places
 
   return (
-    <div className='max-w-[1930px]'>
+    <div>
     <CheckBar />
     {!productsInfos.length && (
       <div className='p-5 font-bold'>No products are in your shopping cart!!</div>
@@ -81,7 +81,7 @@ const total = (Number(subTotal) + parseFloat(deliveryPrice)).toFixed(2); // calc
         </div>
         <div className='pl-2'>
           <h3 className='font-bold text-lg'>{productInfo.title}</h3>
-          <p className='w-[25rem] pr-5 md:w-[45rem] text-sm'>{productInfo.description}</p>
+          <p className='w-[20rem] pr-5 md:w-[45rem] text-sm'>{productInfo.description}</p>
           <div className='flex'>
             <div className='grow font-bold'>
               ${productInfo.price}
@@ -98,7 +98,7 @@ const total = (Number(subTotal) + parseFloat(deliveryPrice)).toFixed(2); // calc
       </div>
     ))}
     <form action="/api/checkout" method='POST' className='md:pl-16'>
-        <div className='flex flex-col p-5 w-[32rem] md:w-[82%]'>
+        <div className='flex flex-col p-5 w-[27rem] md:w-[82%]'>
           <input name="name" value={name} onChange={e => setName(e.target.value) } className='bg-gray-100 w-full md:w-1/2 rounded-lg px-4 py-2 mb-3' type="text" placeholder='Name' />
           <input name="address" value={address} onChange={e => setAddress(e.target.value) } className='bg-gray-100 w-full md:w-1/2 rounded-lg px-4 py-2 mb-3' type="text" placeholder='Street Address' />
           <input name="city" value={city} onChange={e => setCity(e.target.value) } className='bg-gray-100 w-full md:w-1/2 rounded-lg px-4 py-2 mb-3' type="text" placeholder='City and Zip Code' />
@@ -118,7 +118,7 @@ const total = (Number(subTotal) + parseFloat(deliveryPrice)).toFixed(2); // calc
             <h3 className='font-bold'>${total}</h3>
           </div>
             <input type="hidden" name='products' value={selectedProducts.join(',')} />
-        <button type='submit' className='bg-emerald-500  py-2 rounded-lg text-white w-full md:w-1/2 my-4 shadow-lg hover:shadow-emerald-100'>Pay ${total}</button>
+        <button type='submit' className='bg-emerald-500  py-2 rounded-lg text-white w-[25rem] md:w-1/2 my-4 shadow-lg hover:shadow-emerald-100'>Pay ${total}</button>
           </div>
         </form>
         </div>
