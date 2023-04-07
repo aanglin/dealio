@@ -98,13 +98,13 @@ const total = (Number(subTotal) + parseFloat(deliveryPrice)).toFixed(2); // calc
       </div>
     ))}
     <form action="/api/checkout" method='POST' className='md:pl-16'>
-        <div className='flex flex-col p-4 w-[27rem] md:w-[82%]'>
-          <input name="name" value={name} onChange={e => setName(e.target.value) } className='bg-gray-100 w-[92%] md:w-1/2 rounded-lg px-4 py-2 mb-3' type="text" placeholder='Name' />
-          <input name="address" value={address} onChange={e => setAddress(e.target.value) } className='bg-gray-100 w-[92%] md:w-1/2 rounded-lg px-4 py-2 mb-3' type="text" placeholder='Street Address' />
-          <input name="city" value={city} onChange={e => setCity(e.target.value) } className='bg-gray-100 w-[92%] md:w-1/2 rounded-lg px-4 py-2 mb-3' type="text" placeholder='City and Zip Code' />
-          <input name="email" value={email} onChange={e => setEmail(e.target.value) } className='bg-gray-100 w-[92%] md:w-1/2 rounded-lg px-4 py-2 mb-3' type="email" placeholder='Email' />
+        <div className='flex flex-col p-4 w-[27rem] md:w-[100%] lg:w-[82%]'>
+          <input name="name" value={name} onChange={e => setName(e.target.value) } className='bg-gray-100 w-[92%] md:w-[100%] lg:w-1/2 rounded-lg px-4 py-2 mb-3' type="text" placeholder='Name' />
+          <input name="address" value={address} onChange={e => setAddress(e.target.value) } className='bg-gray-100 w-[92%] md:w-[100%] lg:w-1/2 rounded-lg px-4 py-2 mb-3' type="text" placeholder='Street Address' />
+          <input name="city" value={city} onChange={e => setCity(e.target.value) } className='bg-gray-100 w-[92%] md:w-[100%] lg:w-1/2 rounded-lg px-4 py-2 mb-3' type="text" placeholder='City and Zip Code' />
+          <input name="email" value={email} onChange={e => setEmail(e.target.value) } className='bg-gray-100 w-[92%] md:w-[100%] lg:w-1/2 rounded-lg px-4 py-2 mb-3' type="email" placeholder='Email' />
         </div>
-        <div className='mt-4 pl-5  w-[31rem] md:w-[82%]'>
+        <div className='mt-4 pl-5  w-[31rem] md:w-[93rem] lg:w-[82%]'>
           <div className='flex my-3 w-1/2'>
             <h3 className='grow font-bold'>Subtotal</h3>
             <h3 className='font-bold'>${subTotal}</h3>
@@ -118,7 +118,7 @@ const total = (Number(subTotal) + parseFloat(deliveryPrice)).toFixed(2); // calc
             <h3 className='font-bold'>${total}</h3>
           </div>
             <input type="hidden" name='products' value={selectedProducts.join(',')} />
-        <button type='submit' className='bg-emerald-500  py-2 rounded-lg text-white w-[22rem] md:w-1/2 my-4 shadow-lg hover:shadow-emerald-100'>Pay ${total}</button>
+        <button type='submit' className='bg-emerald-500  py-2 rounded-lg text-white w-[22rem] md:w-[46rem] lg:w-1/2 my-4 shadow-lg hover:shadow-emerald-100'>Pay ${total}</button>
           </div>
         </form>
         </div>
