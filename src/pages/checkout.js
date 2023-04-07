@@ -69,7 +69,7 @@ if (subTotal > 100) {
 const total = (Number(subTotal) + parseFloat(deliveryPrice)).toFixed(2); // calculate total and round to 2 decimal places
 
   return (
-    <div>
+    <div className='overflow-hidden'>
     <CheckBar />
     {!productsInfos.length && (
       <div className='p-5 font-bold'>No products are in your shopping cart!!</div>
@@ -79,14 +79,14 @@ const total = (Number(subTotal) + parseFloat(deliveryPrice)).toFixed(2); // calc
         <div className='p-3 shrink-0 w-24'>
           <Image src={productInfo.image} width={1920} height={1080} alt="/" />
         </div>
-        <div className='pl-2'>
+        <div className='pl-1'>
           <h3 className='font-bold text-lg'>{productInfo.title}</h3>
-          <p className='w-[20rem] pr-5 md:w-[45rem] text-sm'>{productInfo.description}</p>
+          <p className='w-[20rem] pr-7 md:w-[45rem] text-sm'>{productInfo.description}</p>
           <div className='flex'>
             <div className='grow font-bold'>
               ${productInfo.price}
               </div>
-              <div className='pr-4 md:pr-0'>
+              <div className='pr-9 md:pr-0'>
               <button onClick={() => minusProducts(productInfo._id)} className='border border-emerald-500 px-2 rounded-lg text-emerald-500'>-</button>
               <span className='px-2'>
                 {selectedProducts.filter(id => id === productInfo._id).length}
@@ -98,7 +98,7 @@ const total = (Number(subTotal) + parseFloat(deliveryPrice)).toFixed(2); // calc
       </div>
     ))}
     <form action="/api/checkout" method='POST' className='md:pl-16'>
-        <div className='flex flex-col p-5 w-[27rem] md:w-[82%]'>
+        <div className='flex flex-col p-4 w-[27rem] md:w-[82%]'>
           <input name="name" value={name} onChange={e => setName(e.target.value) } className='bg-gray-100 w-full md:w-1/2 rounded-lg px-4 py-2 mb-3' type="text" placeholder='Name' />
           <input name="address" value={address} onChange={e => setAddress(e.target.value) } className='bg-gray-100 w-full md:w-1/2 rounded-lg px-4 py-2 mb-3' type="text" placeholder='Street Address' />
           <input name="city" value={city} onChange={e => setCity(e.target.value) } className='bg-gray-100 w-full md:w-1/2 rounded-lg px-4 py-2 mb-3' type="text" placeholder='City and Zip Code' />
