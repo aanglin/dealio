@@ -53,16 +53,16 @@ if (selectedProducts?.length) {
 
 subTotal = subTotal.toFixed(2); // round to 2 decimal places
 
-if (subTotal > 15) {
+if (subTotal > 25) {
   deliveryPrice *= 1.02; // add 2% to deliveryPrice
   deliveryPrice = deliveryPrice.toFixed(2);
 } 
-if (subTotal > 25) {
-  deliveryPrice *= 2.02; // add 2% to deliveryPrice
+if (subTotal > 50) {
+  deliveryPrice *= 1.53; 
   deliveryPrice = deliveryPrice.toFixed(2);
 } 
 if (subTotal > 100) {
-  deliveryPrice *= 3.02; // add 2% to deliveryPrice
+  deliveryPrice *= 2.04; 
   deliveryPrice = deliveryPrice.toFixed(2);
 } 
 
