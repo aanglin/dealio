@@ -81,12 +81,12 @@ const total = (Number(subTotal) + parseFloat(deliveryPrice)).toFixed(2); // calc
         </div>
         <div className='pl-4'>
           <h3 className='font-bold text-lg'>{productInfo.title}</h3>
-          <p className='w-[45rem] text-sm'>{productInfo.description}</p>
+          <p className='w-[25rem] pr-5 md:w-[45rem] text-sm'>{productInfo.description}</p>
           <div className='flex'>
             <div className='grow font-bold'>
               ${productInfo.price}
               </div>
-              <div>
+              <div className='pr-4 md:pr-0'>
               <button onClick={() => minusProducts(productInfo._id)} className='border border-emerald-500 px-2 rounded-lg text-emerald-500'>-</button>
               <span className='px-2'>
                 {selectedProducts.filter(id => id === productInfo._id).length}
@@ -98,13 +98,13 @@ const total = (Number(subTotal) + parseFloat(deliveryPrice)).toFixed(2); // calc
       </div>
     ))}
     <form action="/api/checkout" method='POST'>
-        <div className='flex flex-col p-5 pl-[7rem] w-[82%]'>
-          <input name="name" value={name} onChange={e => setName(e.target.value) } className='bg-gray-100 w-1/2 rounded-lg px-4 py-2 mb-3' type="text" placeholder='Name' />
-          <input name="address" value={address} onChange={e => setAddress(e.target.value) } className='bg-gray-100 w-1/2 rounded-lg px-4 py-2 mb-3' type="text" placeholder='Street Address' />
-          <input name="city" value={city} onChange={e => setCity(e.target.value) } className='bg-gray-100 w-1/2 rounded-lg px-4 py-2 mb-3' type="text" placeholder='City and Zip Code' />
-          <input name="email" value={email} onChange={e => setEmail(e.target.value) } className='bg-gray-100 w-1/2 rounded-lg px-4 py-2 mb-3' type="email" placeholder='Email' />
+        <div className='flex flex-col p-5 pl-[7rem] w-[32rem] md:w-[82%]'>
+          <input name="name" value={name} onChange={e => setName(e.target.value) } className='bg-gray-100 w-full md:w-1/2 rounded-lg px-4 py-2 mb-3' type="text" placeholder='Name' />
+          <input name="address" value={address} onChange={e => setAddress(e.target.value) } className='bg-gray-100 w-full md:w-1/2 rounded-lg px-4 py-2 mb-3' type="text" placeholder='Street Address' />
+          <input name="city" value={city} onChange={e => setCity(e.target.value) } className='bg-gray-100 w-full md:w-1/2 rounded-lg px-4 py-2 mb-3' type="text" placeholder='City and Zip Code' />
+          <input name="email" value={email} onChange={e => setEmail(e.target.value) } className='bg-gray-100 w-full md:w-1/2 rounded-lg px-4 py-2 mb-3' type="email" placeholder='Email' />
         </div>
-        <div className='mt-4 pl-[7rem] w-[82%]'>
+        <div className='mt-4 pl-[7rem] w-[31rem] md:w-[82%]'>
           <div className='flex my-3 w-1/2'>
             <h3 className='grow font-bold'>Subtotal</h3>
             <h3 className='font-bold'>${subTotal}</h3>
@@ -118,7 +118,7 @@ const total = (Number(subTotal) + parseFloat(deliveryPrice)).toFixed(2); // calc
             <h3 className='font-bold'>${total}</h3>
           </div>
             <input type="hidden" name='products' value={selectedProducts.join(',')} />
-        <button type='submit' className='bg-emerald-500 px-5 py-2 rounded-lg text-white w-1/2 my-4 shadow-lg hover:shadow-emerald-100'>Pay ${total}</button>
+        <button type='submit' className='bg-emerald-500 px-5 py-2 rounded-lg text-white w-full md:w-1/2 my-4 shadow-lg hover:shadow-emerald-100'>Pay ${total}</button>
           </div>
         </form>
         </div>
