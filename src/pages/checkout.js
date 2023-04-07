@@ -69,7 +69,7 @@ if (subTotal > 100) {
 const total = (Number(subTotal) + parseFloat(deliveryPrice)).toFixed(2); // calculate total and round to 2 decimal places
 
   return (
-    <div>
+    <div className='max-w-[1930px]'>
     <CheckBar />
     {!productsInfos.length && (
       <div className='p-5 font-bold'>No products are in your shopping cart!!</div>
