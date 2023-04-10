@@ -11,6 +11,8 @@ I have built a fully-functional e-commerce site using Next.js, Tailwind CSS, Mon
 ## Tech Used
 - NextJS
 - Tailwind
+- MongoDB
+- Stripe
 
 ## Prototype
 ![Dealio](./public/assets/dealio.png)
